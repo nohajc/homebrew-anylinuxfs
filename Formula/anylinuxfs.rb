@@ -1,8 +1,8 @@
 class Anylinuxfs < Formula
   desc "Mount any linux-supported filesystem read/write using nfs and a microVM"
   homepage "https://github.com/nohajc/anylinuxfs"
-  url "https://github.com/nohajc/anylinuxfs/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "60a946c0acca232fa34218c8a4b82a1482e5a0467a1398c8e4c1a84fe457977f"
+  url "https://github.com/nohajc/anylinuxfs/archive/refs/tags/v0.1.4.tar.gz"
+  sha256 "e320bb2bdedb3b38c7c70a510dae616cd439d0aeba9242a275d590847e672e04"
   license "GPL-3.0-or-later"
 
   # bottle do
@@ -44,6 +44,7 @@ class Anylinuxfs < Formula
     end
 
     resource("linux-image").stage do
+      chmod 0644, "Image"
       libexec.install "Image"
     end
   end

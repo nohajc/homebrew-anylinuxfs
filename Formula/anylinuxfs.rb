@@ -1,18 +1,13 @@
 class Anylinuxfs < Formula
   desc "Mount any linux-supported filesystem read/write using nfs and a microVM"
   homepage "https://github.com/nohajc/anylinuxfs"
-  url "https://github.com/nohajc/anylinuxfs/archive/refs/tags/v0.1.4.tar.gz"
-  sha256 "e320bb2bdedb3b38c7c70a510dae616cd439d0aeba9242a275d590847e672e04"
+  url "https://github.com/nohajc/anylinuxfs/archive/refs/tags/v0.1.6.tar.gz"
+  sha256 "b9301fe7a88c4d053e12a86498032b359f76032ab326a51e93cbf7eb04492b0b"
   license "GPL-3.0-or-later"
 
-  # bottle do
-  #   root_url "https://raw.githubusercontent.com/nohajc/homebrew-anylinuxfs/master/bottles"
-  #   sha256 cellar: :any, arm64_sequoia: "2eedc8025c4253c29e60be3c21637720f6bb9e2789667880bc012c437a920d93"
-  # end
-
+  depends_on "filosottile/musl-cross/musl-cross" => :build
   depends_on "go" => :build
   depends_on "make" => :build
-  depends_on "messense/macos-cross-toolchains/aarch64-unknown-linux-musl" => :build
   depends_on "pkgconf" => :build
   depends_on "rustup" => :build
 

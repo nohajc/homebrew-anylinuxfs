@@ -5,11 +5,6 @@ class Anylinuxfs < Formula
   sha256 "e320bb2bdedb3b38c7c70a510dae616cd439d0aeba9242a275d590847e672e04"
   license "GPL-3.0-or-later"
 
-  # bottle do
-  #   root_url "https://raw.githubusercontent.com/nohajc/homebrew-anylinuxfs/master/bottles"
-  #   sha256 cellar: :any, arm64_sequoia: "2eedc8025c4253c29e60be3c21637720f6bb9e2789667880bc012c437a920d93"
-  # end
-
   depends_on "go" => :build
   depends_on "make" => :build
   depends_on "messense/macos-cross-toolchains/aarch64-unknown-linux-musl" => :build

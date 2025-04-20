@@ -5,6 +5,11 @@ class Anylinuxfs < Formula
   sha256 "b9301fe7a88c4d053e12a86498032b359f76032ab326a51e93cbf7eb04492b0b"
   license "GPL-3.0-or-later"
 
+  bottle do
+    root_url "https://github.com/nohajc/homebrew-anylinuxfs/releases/download/v0.1.6"
+    sha256 cellar: :any, arm64_sequoia: "cfba6ca9a21c5cd53894ba95367df29db498c2e854db421c898d69e4fe193567"
+  end
+
   depends_on "filosottile/musl-cross/musl-cross" => :build
   depends_on "go" => :build
   depends_on "make" => :build

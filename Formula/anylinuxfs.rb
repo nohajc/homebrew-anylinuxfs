@@ -1,8 +1,8 @@
 class Anylinuxfs < Formula
   desc "Mount any linux-supported filesystem read/write using nfs and a microVM"
   homepage "https://github.com/nohajc/anylinuxfs"
-  url "https://github.com/nohajc/anylinuxfs/archive/refs/tags/v0.1.4.tar.gz"
-  sha256 "e320bb2bdedb3b38c7c70a510dae616cd439d0aeba9242a275d590847e672e04"
+  url "https://github.com/nohajc/anylinuxfs/archive/refs/tags/v0.1.5.tar.gz"
+  sha256 "dbce84187326ba27c5c521043ac438c8ce199eee955ee2465a5f7589bd44a471"
   license "GPL-3.0-or-later"
 
   depends_on "go" => :build

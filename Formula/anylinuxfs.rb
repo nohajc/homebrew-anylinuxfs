@@ -1,15 +1,15 @@
 class Anylinuxfs < Formula
-  VERSION = "0.5.1".freeze
+  VERSION = "0.5.2".freeze
 
   desc "Mount any linux-supported filesystem read/write using nfs and a microVM"
   homepage "https://github.com/nohajc/anylinuxfs"
   url "https://github.com/nohajc/anylinuxfs/archive/refs/tags/v#{VERSION}.tar.gz"
-  sha256 "4fe8168aa8a0fdf175943dca724148dc7baa1310cd12e91f5fa42f9c043b4500"
+  sha256 "80c32ef55197fe354ba10d1873a52c5cbfbd762f5e06b93d6347ebbfb12b325e"
   license "GPL-3.0-or-later"
 
   bottle do
     root_url "https://github.com/nohajc/homebrew-anylinuxfs/releases/download/v#{VERSION}"
-    sha256 cellar: :any, arm64_sequoia: "cc870fe15c6640a6647c101671e491f706116ac024c6f9fa8e7819f19e224940"
+    sha256 cellar: :any, arm64_sequoia: "1bb1a15f900c3f7b11b6f734b648297289ceae5eb740d02cfa63f1a053a6ed45"
   end
 
   depends_on "filosottile/musl-cross/musl-cross" => :build

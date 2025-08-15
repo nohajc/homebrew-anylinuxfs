@@ -1,15 +1,15 @@
 class Anylinuxfs < Formula
-  VERSION = "0.5.2".freeze
+  VERSION = "0.6.0".freeze
 
   desc "Mount any linux-supported filesystem read/write using nfs and a microVM"
   homepage "https://github.com/nohajc/anylinuxfs"
   url "https://github.com/nohajc/anylinuxfs/archive/refs/tags/v#{VERSION}.tar.gz"
-  sha256 "80c32ef55197fe354ba10d1873a52c5cbfbd762f5e06b93d6347ebbfb12b325e"
+  sha256 "d09c863e79f805f9a120d8ee192ff41fc1347c8ecd249969b380642d7a7a0dc2"
   license "GPL-3.0-or-later"
 
   bottle do
     root_url "https://github.com/nohajc/homebrew-anylinuxfs/releases/download/v#{VERSION}"
-    sha256 cellar: :any, arm64_sequoia: "1bb1a15f900c3f7b11b6f734b648297289ceae5eb740d02cfa63f1a053a6ed45"
+    sha256 cellar: :any, arm64_sequoia: "c68641df90b32b4a542d22a14a41dc1a300e9bcedd9e8a26fd8f1ca13ef6dc2b"
   end
 
   depends_on "filosottile/musl-cross/musl-cross" => :build
@@ -30,8 +30,8 @@ class Anylinuxfs < Formula
   end
 
   resource "linux-image" do
-    url "https://github.com/nohajc/libkrunfw/releases/download/v6.12.34-rev2/linux-aarch64-Image-v6.12.34-anylinuxfs.tar.gz"
-    sha256 "80f244563018bca3550204d9c4a8b948377202afefc53763dfe108707700eba1"
+    url "https://github.com/nohajc/libkrunfw/releases/download/v6.12.34-rev3/linux-aarch64-Image-v6.12.34-anylinuxfs.tar.gz"
+    sha256 "a09654323087182813312a524e23b6e59335dd1082dc73e38d440c5d287b47be"
   end
 
   def install

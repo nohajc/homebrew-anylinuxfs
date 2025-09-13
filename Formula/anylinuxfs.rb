@@ -1,15 +1,15 @@
 class Anylinuxfs < Formula
-  VERSION = "0.6.1".freeze
+  VERSION = "0.7.0".freeze
 
   desc "Mount any linux-supported filesystem read/write using nfs and a microVM"
   homepage "https://github.com/nohajc/anylinuxfs"
   url "https://github.com/nohajc/anylinuxfs/archive/refs/tags/v#{VERSION}.tar.gz"
-  sha256 "280b774d7a3e71656af30796ffed765ee51c5b8839dea0712772de78e55f818e"
+  sha256 "294f2e297cf2d90290c9a47edaa3a701c4a801378106792ac078586963606f0b"
   license "GPL-3.0-or-later"
 
   bottle do
     root_url "https://github.com/nohajc/homebrew-anylinuxfs/releases/download/v#{VERSION}"
-    sha256 cellar: :any, arm64_sequoia: "e4372ff94efe60d36abf76a18b94e4028c82fe7d1ef7d204301f0d3966801df7"
+    sha256 cellar: :any, arm64_sequoia: "42b54f44c75f05fd5d625b912acaf58472fe7f16991cecbd9ef413742e76d737"
   end
 
   depends_on "filosottile/musl-cross/musl-cross" => :build
@@ -25,8 +25,8 @@ class Anylinuxfs < Formula
   depends_on "util-linux"
 
   resource "gvproxy" do
-    url "https://github.com/containers/gvisor-tap-vsock/archive/refs/tags/v0.8.6.tar.gz"
-    sha256 "eb08309d452823ca7e309da2f58c031bb42bb1b1f2f0bf09ca98b299e326b215"
+    url "https://github.com/containers/gvisor-tap-vsock/archive/refs/tags/v0.8.7.tar.gz"
+    sha256 "ef9765d24bc3339014dd4a8f2e2224f039823278c249fb9bd1416ba8bbab590b"
   end
 
   resource "linux-image" do

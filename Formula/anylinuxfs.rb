@@ -31,8 +31,13 @@ class Anylinuxfs < Formula
   end
 
   resource "linux-image" do
-    url "https://github.com/nohajc/libkrunfw/releases/download/v6.12.34-rev3/linux-aarch64-Image-v6.12.34-anylinuxfs.tar.gz"
-    sha256 "a09654323087182813312a524e23b6e59335dd1082dc73e38d440c5d287b47be"
+    url "https://github.com/nohajc/libkrunfw/releases/download/v6.12.34-rev4/linux-aarch64-Image-v6.12.34-anylinuxfs.tar.gz"
+    sha256 "4c5d0d20141915c5cef9d6dddcdb066d34e6a8c9d337e7fa09ebf4b0e82d14fc"
+  end
+
+  resource "linux-modules" do
+    url "https://github.com/nohajc/libkrunfw/releases/download/v6.12.34-rev4/modules.squashfs"
+    sha256 "89a9389230a007d45da1a62a8d65bb6b116284dddfa00d293445513113f67a0a"
   end
 
   def install
@@ -49,6 +54,11 @@ class Anylinuxfs < Formula
     resource("linux-image").stage do
       chmod 0644, "Image"
       libexec.install "Image"
+    end
+
+    resource("linux-modules").stage do
+      chmod 0644, "modules.squashfs"
+      lib.install "modules.squashfs"
     end
   end
 

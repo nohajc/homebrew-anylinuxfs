@@ -46,6 +46,8 @@ class Anylinuxfs < Formula
     system "./build-app.sh", "--release"
     system "./install.sh", prefix
 
+    etc.install "etc/anylinuxfs.toml" => "anylinuxfs.toml"
+
     resource("gvproxy").stage do
       system "gmake", "gvproxy"
       libexec.install "bin/gvproxy"

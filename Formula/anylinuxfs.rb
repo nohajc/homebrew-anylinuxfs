@@ -40,15 +40,15 @@ class Anylinuxfs < Formula
     sha256 "89a9389230a007d45da1a62a8d65bb6b116284dddfa00d293445513113f67a0a"
   end
 
-  resource "libkrun-init-bsd" do
-    url "https://github.com/nohajc/libkrun/archive/refs/tags/v1.16.0-init-bsd.tar.gz"
-    sha256 "b9dc2e0e95afbb8eb78647043bd9afe90bbbb82da06a0252053a9e7456be7289"
-  end
+  # resource "libkrun-init-bsd" do
+  #   url "https://github.com/nohajc/libkrun/archive/refs/tags/v1.16.0-init-bsd.tar.gz"
+  #   sha256 "b9dc2e0e95afbb8eb78647043bd9afe90bbbb82da06a0252053a9e7456be7289"
+  # end
 
   def install
     system "rustup", "default", "stable"
     system "rustup", "target", "add", "aarch64-unknown-linux-musl"
-    system "rustup", "+nightly", "component", "add", "rust-src"
+    # system "rustup", "+nightly", "component", "add", "rust-src"
     system "./build-app.sh", "--release"
     system "./install.sh", prefix
 
@@ -69,10 +69,10 @@ class Anylinuxfs < Formula
       lib.install "modules.squashfs"
     end
 
-    resource("libkrun-init-bsd").stage do
-      system "./build_freebsd_init.sh"
-      libexec.install "init/init-freebsd"
-    end
+    # resource("libkrun-init-bsd").stage do
+    #   system "./build_freebsd_init.sh"
+    #   libexec.install "init/init-freebsd"
+    # end
   end
 
   test do

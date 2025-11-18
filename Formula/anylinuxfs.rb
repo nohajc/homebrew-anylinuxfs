@@ -15,6 +15,7 @@ class Anylinuxfs < Formula
 
   depends_on "go" => :build
   depends_on "lld" => :build
+  depends_on "llvm" => :build
   depends_on "make" => :build
   depends_on "pkgconf" => :build
   depends_on "rustup" => :build

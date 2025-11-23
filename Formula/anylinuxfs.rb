@@ -54,6 +54,7 @@ class Anylinuxfs < Formula
     system "./install.sh", prefix
 
     etc.install "etc/anylinuxfs.toml" => "anylinuxfs.toml"
+    share.install "etc/anylinuxfs.conf" => "anylinuxfs.default.conf"
 
     resource("gvproxy").stage do
       system "gmake", "gvproxy"
@@ -74,6 +75,10 @@ class Anylinuxfs < Formula
     #   system "./build_freebsd_init.sh"
     #   libexec.install "init/init-freebsd"
     # end
+  end
+
+  def post_install
+    system "#{bin}/anylinuxfs", "upgrade-config", "#{etc}/anylinuxfs.toml", "-o", "#{etc}/anylinuxfs.toml"
   end
 
   test do

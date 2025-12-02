@@ -53,7 +53,7 @@ class Anylinuxfs < Formula
     system "./install.sh", prefix
 
     etc.install "etc/anylinuxfs.toml" => "anylinuxfs.toml"
-    share.install "etc/anylinuxfs.toml" => "anylinuxfs.default.toml"
+    # share.install "etc/anylinuxfs.toml" => "anylinuxfs.default.toml"
 
     resource("gvproxy").stage do
       system "gmake", "gvproxy"

@@ -74,6 +74,8 @@ class Anylinuxfs < Formula
     #   system "./build_freebsd_init.sh"
     #   libexec.install "init/init-freebsd"
     # end
+
+    post_install
   end
 
   def post_install

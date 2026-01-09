@@ -10,7 +10,7 @@ class Anylinuxfs < Formula
   bottle do
     root_url "https://github.com/nohajc/homebrew-anylinuxfs/releases/download/v#{VERSION}"
     sha256 cellar: :any, arm64_tahoe:   "b08b1b3ef3d9c6ea2396ff5af661fb8cd4675d7729cadbb184c9a02993fd9ea4"
-    sha256 cellar: :any, arm64_sequoia: "eb5bba17943e4c60d26a3fcfa56ed0b7f0d93d5d71f66a8276a1ea0495c7a28a"
+    sha256 cellar: :any, arm64_sequoia: "ebba3c3564eb6d34da655002a399e29f6f8b946235fb6e70fb1c82915f013f82"
   end
 
   depends_on "go" => :build

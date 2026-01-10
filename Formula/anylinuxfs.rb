@@ -31,13 +31,13 @@ class Anylinuxfs < Formula
   end
 
   resource "linux-image" do
-    url "https://github.com/nohajc/libkrunfw/releases/download/v6.12.62/linux-aarch64-Image-v6.12.62-anylinuxfs.tar.gz"
-    sha256 "48038f83a41e7e57ec0444e8496fda7de5e4fb0525795c3deaa7df67b966de0d"
+    url "https://github.com/nohajc/libkrunfw/releases/download/v6.12.62-rev1/linux-aarch64-Image-v6.12.62-anylinuxfs.tar.gz"
+    sha256 "dae37ca8947582b3e0cdc9efdbc2de5f546f989d1ae4d621bbc34e90cf412001"
   end
 
   resource "linux-modules" do
-    url "https://github.com/nohajc/libkrunfw/releases/download/v6.12.62/modules.squashfs"
-    sha256 "2f5a6c4a78ed953b4ac30abe093dc9f3ba901ee2deff5fe3384945f29cc95587"
+    url "https://github.com/nohajc/libkrunfw/releases/download/v6.12.62-rev1/modules.squashfs"
+    sha256 "86ed485e4e46ba265261a55e25c92ea15f6118003fcec95a8bafde8ad39f697f"
   end
 
   # resource "libkrun-init-bsd" do

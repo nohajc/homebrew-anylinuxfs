@@ -31,8 +31,8 @@ class Anylinuxfs < Formula
   end
 
   resource "linux-image" do
-    url "https://github.com/nohajc/libkrunfw/releases/download/v6.12.62-rev1/linux-aarch64-Image-v6.12.62-anylinuxfs.tar.gz"
-    sha256 "dae37ca8947582b3e0cdc9efdbc2de5f546f989d1ae4d621bbc34e90cf412001"
+    url "https://github.com/nohajc/libkrunfw/releases/download/v6.12.62-rev1/linux-aarch64-Images-v6.12.62-anylinuxfs.tar.gz"
+    sha256 "1de75a3d4ef2eccd41df10f2eac8435dbaba52371fa42b0b0384fd9cf9a1f3ce"
   end
 
   resource "linux-modules" do
@@ -62,7 +62,9 @@ class Anylinuxfs < Formula
 
     resource("linux-image").stage do
       chmod 0644, "Image"
+      chmod 0644, "Image-4K"
       libexec.install "Image"
+      libexec.install "Image-4K"
     end
 
     resource("linux-modules").stage do

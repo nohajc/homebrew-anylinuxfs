@@ -40,20 +40,19 @@ class Anylinuxfs < Formula
     sha256 "86ed485e4e46ba265261a55e25c92ea15f6118003fcec95a8bafde8ad39f697f"
   end
 
-  # resource "libkrun-init-bsd" do
-  #   url "https://github.com/nohajc/libkrun/archive/refs/tags/v1.16.0-init-bsd.tar.gz"
-  #   sha256 "b9dc2e0e95afbb8eb78647043bd9afe90bbbb82da06a0252053a9e7456be7289"
-  # end
+  resource "libkrun-init-bsd" do
+    url "https://github.com/nohajc/libkrun/archive/refs/tags/v1.17.0-init-bsd.tar.gz"
+    sha256 "a5e2ea3e82f80e1a83b67de2916065b12ec489c59e1e11bcd1689c4607269c90"
+  end
 
   def install
     system "rustup", "default", "stable"
     system "rustup", "target", "add", "aarch64-unknown-linux-musl"
-    # system "rustup", "+nightly", "component", "add", "rust-src"
+    system "rustup", "+nightly", "component", "add", "rust-src"
     system "./build-app.sh", "--release"
     system "./install.sh", prefix
 
     etc.install "etc/anylinuxfs.toml" => "anylinuxfs.toml"
-    # share.install "etc/anylinuxfs.toml" => "anylinuxfs.default.toml"
 
     resource("gvproxy").stage do
       system "gmake", "gvproxy"
@@ -72,10 +71,10 @@ class Anylinuxfs < Formula
       lib.install "modules.squashfs"
     end
 
-    # resource("libkrun-init-bsd").stage do
-    #   system "./build_freebsd_init.sh"
-    #   libexec.install "init/init-freebsd"
-    # end
+    resource("libkrun-init-bsd").stage do
+      system "gmake BUILD_BSD_INIT=1 -- init/init-freebsd"
+      libexec.install "init/init-freebsd"
+    end
 
     post_install
   end

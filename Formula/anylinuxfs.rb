@@ -48,7 +48,7 @@ class Anylinuxfs < Formula
   def install
     system "rustup", "default", "stable"
     system "rustup", "target", "add", "aarch64-unknown-linux-musl"
-    system "rustup", "+nightly", "component", "add", "rust-src"
+    system "rustup", "+nightly-2026-01-25", "component", "add", "rust-src"
     system "./build-app.sh", "--release"
     system "./install.sh", prefix
 

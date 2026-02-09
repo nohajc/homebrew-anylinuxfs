@@ -55,6 +55,9 @@ class Anylinuxfs < Formula
 
     etc.install "etc/anylinuxfs.toml" => "anylinuxfs.toml"
 
+    (share/"alpine").install "share/alpine/rootfs.ver"
+    (share/"freebsd").install "share/freebsd/rootfs.ver"
+
     resource("gvproxy").stage do
       system "gmake", "gvproxy"
       libexec.install "bin/gvproxy"

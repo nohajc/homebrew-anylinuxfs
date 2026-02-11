@@ -76,6 +76,7 @@ class Anylinuxfs < Formula
     end
 
     resource("libkrun-init-bsd").stage do
+      system "sed -I '' 's_/usr/bin/clang_/opt/homebrew/opt/llvm/bin/clang_' Makefile"
       system "gmake BUILD_BSD_INIT=1 -- init/init-freebsd"
       libexec.install "init/init-freebsd"
     end

@@ -31,6 +31,11 @@ class Anylinuxfs < Formula
     sha256 "4f7c4885225d71b21f6b547b94d92fc6da4a4fef9d382fdd19c8ea67f67be839"
   end
 
+  resource "vmnet-helper" do
+    url "https://github.com/nirs/vmnet-helper/releases/download/v0.9.0/vmnet-helper.tar.gz"
+    sha256 "5c76413428a09ce45faf719f7fb2f621e9b3a0b103024837aecdb8319cdcf32c"
+  end
+
   resource "linux-image" do
     url "https://github.com/nohajc/libkrunfw/releases/download/v6.12.62-rev1/linux-aarch64-Images-v6.12.62-anylinuxfs.tar.gz"
     sha256 "1de75a3d4ef2eccd41df10f2eac8435dbaba52371fa42b0b0384fd9cf9a1f3ce"
@@ -61,6 +66,10 @@ class Anylinuxfs < Formula
     resource("gvproxy").stage do
       system "gmake", "gvproxy"
       libexec.install "bin/gvproxy"
+    end
+
+    resource("vmnet-helper").stage do
+      libexec.install "opt/vmnet-helper/bin/vmnet-helper"
     end
 
     resource("linux-image").stage do

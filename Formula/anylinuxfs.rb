@@ -69,7 +69,7 @@ class Anylinuxfs < Formula
     end
 
     resource("vmnet-helper").stage do
-      libexec.install "opt/vmnet-helper/bin/vmnet-helper"
+      libexec.install "vmnet-helper/bin/vmnet-helper"
     end
 
     resource("linux-image").stage do

@@ -32,8 +32,8 @@ class Anylinuxfs < Formula
   end
 
   resource "vmnet-helper" do
-    url "https://github.com/nirs/vmnet-helper/releases/download/v0.9.0/vmnet-helper.tar.gz"
-    sha256 "5c76413428a09ce45faf719f7fb2f621e9b3a0b103024837aecdb8319cdcf32c"
+    url "https://github.com/nirs/vmnet-helper/releases/download/v0.11.0/vmnet-helper.tar.gz"
+    sha256 "dfeca3e8cc9d9b1e0e40df12e42975f10433b9ccbb8f0a239d42df99611caa76"
   end
 
   resource "linux-image" do

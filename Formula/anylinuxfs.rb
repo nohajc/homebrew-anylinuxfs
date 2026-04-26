@@ -19,6 +19,7 @@ class Anylinuxfs < Formula
   depends_on "make" => :build
   depends_on "pkgconf" => :build
   depends_on "rustup" => :build
+  depends_on "xz" => :build
 
   # libkrun only supports Hypervisor.framework on arm64
   depends_on arch: :arm64

@@ -23,7 +23,6 @@ class Anylinuxfs < Formula
   # libkrun only supports Hypervisor.framework on arm64
   depends_on arch: :arm64
   depends_on :macos
-  depends_on "slp/krun/libkrun"
   depends_on "util-linux"
 
   resource "gvproxy" do

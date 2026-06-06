@@ -27,8 +27,8 @@ class Anylinuxfs < Formula
   depends_on "util-linux"
 
   resource "gvproxy" do
-    url "https://github.com/containers/gvisor-tap-vsock/archive/refs/tags/v0.8.8.tar.gz"
-    sha256 "4f7c4885225d71b21f6b547b94d92fc6da4a4fef9d382fdd19c8ea67f67be839"
+    url "https://github.com/containers/gvisor-tap-vsock/archive/refs/tags/v0.8.9.tar.gz"
+    sha256 "6cbcb7959a5d90b59253ea6d8bdf0285e2cfbc3b301398704b41e3069293f4fb"
   end
 
   resource "vmnet-helper" do

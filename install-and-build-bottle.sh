@@ -6,6 +6,7 @@ macos_codename() {
     14) echo "sonoma" ;;
     15) echo "sequoia" ;;
     26) echo "tahoe" ;;
+    27) echo "golden_gate" ;;
     *)  echo "unknown" ;;
   esac
 }

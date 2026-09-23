@@ -48,8 +48,8 @@ class Anylinuxfs < Formula
   end
 
   resource "libkrun-init-bsd" do
-    url "https://github.com/nohajc/libkrun/archive/refs/tags/v1.17.0-init-bsd.tar.gz"
-    sha256 "a5e2ea3e82f80e1a83b67de2916065b12ec489c59e1e11bcd1689c4607269c90"
+    url "https://github.com/nohajc/libkrun/archive/refs/tags/v1.17.0-init-bsd-r1.tar.gz"
+    sha256 "b6c96760dbd0e9760d2e6c469ead98a060c9f6f92708f8cb47c68fb7c2fec1d3"
   end
 
   def install
